@@ -8,6 +8,12 @@
 * Date: Thu June 21 20:58 2012 GMT
 */
 
+/*
+	//call like so
+	baseline.init('img', '24');
+	baseline.init('.post img', '48');
+*/
+
 var baseline = function(){
 
 	var tall, newHeight, target, imgl, cur, images = [];
