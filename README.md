@@ -6,6 +6,6 @@ Simply call the plugin like so, passing a selector and the height of your baseli
 
 ```javascript
 // call like so
-baseline.init('img', '24');
-baseline.init('.post img', '48');
+baseline.init('img', 24);
+baseline.init('.post img', 48);
 ```
