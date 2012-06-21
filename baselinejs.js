@@ -33,7 +33,7 @@ var baseline = function(){
 
 		setbase: function(imgs){
 			this.imgl = imgs.length;
-			if(this.imgl !== 0){
+			if(this.imgl){
 				while(this.imgl--){
 					this.cur = imgs[this.imgl];
 					this.cur.removeAttribute("style");
@@ -41,8 +41,6 @@ var baseline = function(){
 					this.newHeight = Math.floor(this.tall / this.target) * this.target;
 					this.cur.style.maxHeight = this.newHeight + 'px';
 				}
-			} else {
-				return false;
 			}
 		}
 
