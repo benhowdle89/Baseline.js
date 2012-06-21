@@ -1,8 +1,8 @@
-# Baseline.js
+# BaselineJS.js
 
-Baseline.js is a simple jQuery plugin for restoring baselines thrown off by odd image sizes.
+BaselineJS.js is a simple Javascript plugin for restoring baselines thrown off by odd image sizes. Based on : [Dan Eden's Baseline.js jQuery plugin](http://daneden.me/baseline/ "Baseline.js")
 
-Simply call the plugin like so, passing the height of your baseline as a variable. It even works on responsive designs!
+Simply call the plugin like so, passing a selector and the height of your baseline as a variable. It even works on responsive designs!
 
 ```javascript
 // call like so
