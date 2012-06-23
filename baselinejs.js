@@ -12,6 +12,7 @@
 	//call like so
 	baseline.init('img', '24');
 	baseline.init('.post img', '48');
+	baseline.init('#content img', {480: 30, 640: 35}); // an object of breakpoints, ie. 480px or above, baseline is 30px.
 */
 
 var baseline = function(){
@@ -23,12 +24,25 @@ var baseline = function(){
 		init: function(selector, target){
 			if(selector === undefined || target === undefined) return false;
 			this.images = document.querySelectorAll(selector);
-			this.target = target;
 			this.setbase(this.images);
+			this.tellmetarget(target);
 			var me = this;
 			window.onresize = function() {
+				me.tellmetarget(target);
 				me.setbase(me.images);
 			};
+		},
+
+		tellmetarget: function(target){
+			if(typeof target === 'number'){
+				this.target = target;
+			} else if(typeof target === 'object'){
+				for(x in target){
+					if(document.width > x){
+						this.target = target[x];
+					}
+				}
+			}
 		},
 
 		setbase: function(imgs){
